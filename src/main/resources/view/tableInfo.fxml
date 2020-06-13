@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="io.wcheng.dataimporter.controller.TableInfoController"
+      stylesheets="/css/common.css">
+    <HBox>
+        <Text fx:id="databaseName" />
+        <Text fx:id="schemaName" />
+        <Text fx:id="tableName" />
+    </HBox>
+
+    <ScrollPane fx:id="scrollPane">
+        <GridPane fx:id="tableFields" hgap="10" vgap="10" />
+    </ScrollPane>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="OK" onAction="#toNextView" />
+    </HBox>
+</VBox>

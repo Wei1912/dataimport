@@ -1,0 +1,18 @@
+.root {
+    -fx-border-width: 0;
+    -fx-padding: 20;
+    -fx-background: #FFFAFA;
+    -fx-font-size: 10pt;
+}
+
+.text-field.error {
+  -fx-text-box-border: red ;
+  -fx-focus-color: red ;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: transparent;
+}
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}

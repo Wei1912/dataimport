@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="io.wcheng.dataimporter.controller.DBLoginController"
+      stylesheets="/css/common.css">
+    <HBox>
+        <Label text="Server" />
+        <TextField fx:id="serverField" />
+        <Label text="Port" />
+        <TextField fx:id="portField" text="5432" />
+    </HBox>
+    <HBox>
+        <Label text="Database" />
+        <TextField fx:id="databaseField" promptText="Option" />
+        <Label text="Schema" />
+        <TextField fx:id="schemaField" promptText="Option" />
+    </HBox>
+    <HBox>
+        <Label text="Table" />
+        <TextField fx:id="tableField" promptText="Option" />
+    </HBox>
+    <HBox>
+        <Label text="User" />
+        <TextField fx:id="userField" />
+        <Label text="Password" />
+        <PasswordField fx:id="passwordField" />
+    </HBox>
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Login" onAction="#login" />
+    </HBox>
+</VBox>

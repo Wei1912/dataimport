@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="io.wcheng.dataimporter.controller.SelectFileController"
+      stylesheets="/css/common.css">
+
+    <VBox fx:id="part1" style="-fx-padding: 0 0 20 0;">
+        <Button mnemonicParsing="false" text="Select a file" onAction="#selectFile" />
+        <Text fx:id="selectedFile" text="" visible="false" />
+    </VBox>
+
+    <VBox fx:id="part2" visible="false">
+        <GridPane vgap="10" hgap="20">
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Delimiter" />
+            <TextField GridPane.rowIndex="0" GridPane.columnIndex="1" fx:id="delimiterField" text="," />
+
+            <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text="Qualifier" />
+            <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" fx:id="qualifierField" text="&quot;" />
+
+            <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="Encoding" />
+            <TextField GridPane.rowIndex="2" GridPane.columnIndex="1" fx:id="encodingField" text="UTF-8" />
+        </GridPane>
+
+        <HBox alignment="CENTER_RIGHT">
+            <Button text="Load" onAction="#loadFile" />
+        </HBox>
+    </VBox>
+</VBox>
